@@ -1,5 +1,5 @@
 # ToDo:
-# - pl summary/description
+# - pl summary
 %include	/usr/lib/rpm/macros.php
 %define         _class          Mail
 %define         _subclass       IMAP
@@ -11,7 +11,7 @@ Summary:	%{_pearname} - Provides a c-client webmail backend.
 Name:		php-pear-%{_pearname}
 Version:	0.1.4A
 Release:	1
-License:	PHP 2.02
+License:	PHP
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	0e3c559a6bcf55c7748ffaf58993e92e
