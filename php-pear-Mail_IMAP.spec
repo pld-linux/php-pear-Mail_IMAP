@@ -8,11 +8,11 @@ Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	0.RC2
+Release:	0.RC3
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC2.tgz
-# Source0-md5:	1ce34f6491462a40e347575852315843
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC3.tgz
+# Source0-md5:	64b32ec594b0213ac922c19e9df89c42
 URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -36,13 +36,13 @@ równie¿ umo¿liwia odbiór tre¶ci wiadomo¶ci.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c -n %{name}-%{version}RC2
+%setup -q -c -n %{name}-%{version}RC3
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
-install %{_pearname}-%{version}RC2/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}RC3/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
