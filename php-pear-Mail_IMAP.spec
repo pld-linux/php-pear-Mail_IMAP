@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
-Version:	1.0.0
-Release:	0.RC3
+Version:	1.1.0
+Release:	0.RC1
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC3.tgz
-# Source0-md5:	64b32ec594b0213ac922c19e9df89c42
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
+# Source0-md5:	62481c4517c0727bedd1acd9c7c8b451
 URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -25,7 +25,7 @@ Mail_IMAP provides a simplifed backend for working with the c-client
 c-client functions. It provides structure and header parsing as well
 as body retrieval.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Mail_IMAP dostarcza uproszczonego backendu do pracy z rozszerzeniem
@@ -36,13 +36,13 @@ równie¿ umo¿liwia odbiór tre¶ci wiadomo¶ci.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c -n %{name}-%{version}RC3
+%setup -q -c -n %{name}-%{version}RC1
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
-install %{_pearname}-%{version}RC3/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}RC1/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
