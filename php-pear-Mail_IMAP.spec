@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          Mail
-%define         _subclass       IMAP
+%define		_class		Mail
+%define		_subclass	IMAP
 %define		_status		alpha
 %define		_pearname	%{_class}_%{_subclass}
 
