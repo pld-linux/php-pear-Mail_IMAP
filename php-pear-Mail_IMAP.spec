@@ -8,16 +8,21 @@ Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
-Release:	0.RC1
+%define		_rc RC1
+%define		_rel 0.1
+Release:	0.%{_rc}.%{_rel}
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}RC1.tgz
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 # Source0-md5:	62481c4517c0727bedd1acd9c7c8b451
 URL:		http://pear.php.net/package/Mail_IMAP/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# exclude optional dependencies
+%define		_noautoreq	'pear(Net/URL.*)'
 
 %description
 Mail_IMAP provides a simplifed backend for working with the c-client
@@ -36,17 +41,23 @@ równie¿ umo¿liwia odbiór tre¶ci wiadomo¶ci.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c -n %{name}-%{version}RC1
+%pear_package_setup
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-
-install %{_pearname}-%{version}RC1/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+if [ -f %{_docdir}/%{name}-%{version}/optional-packages.txt ]; then
+	cat %{_docdir}/%{name}-%{version}/optional-packages.txt
+fi
+
 %files
 %defattr(644,root,root,755)
+%doc install.log optional-packages.txt
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
