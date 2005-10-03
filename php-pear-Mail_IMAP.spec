@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
 %define		_rc RC1
-%define		_rel 0.1
+%define		_rel 0.2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP
 Group:		Development/Languages/PHP
@@ -17,6 +17,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 # Source0-md5:	62481c4517c0727bedd1acd9c7c8b451
 URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+Requires:	php-imap
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
