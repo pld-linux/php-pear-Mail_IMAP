@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
 %define		_rc RC2
-%define		_rel 1
+%define		_rel 2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP
 Group:		Development/Languages/PHP
