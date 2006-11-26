@@ -4,12 +4,12 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
+%define		_rc RC2
+%define		_rel 3
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekê c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
-%define		_rc RC2
-%define		_rel 2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP
 Group:		Development/Languages/PHP
@@ -19,7 +19,7 @@ URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php-imap
+Requires:	php(imap)
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +29,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Mail_IMAP provides a simplifed backend for working with the c-client
-(IMAP) extension.  It serves as an OO wrapper for commonly used
+(IMAP) extension. It serves as an OO wrapper for commonly used
 c-client functions. It provides structure and header parsing as well
 as body retrieval.
 
