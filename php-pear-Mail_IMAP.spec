@@ -7,7 +7,7 @@
 %define		_rc RC2
 %define		_rel 3
 Summary:	%{_pearname} - a c-client webmail backend
-Summary(pl):	%{_pearname} - backend webmaila oparty o bibliotekÍ c-client
+Summary(pl.UTF-8):   %{_pearname} - backend webmaila oparty o bibliotekƒô c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
 Release:	0.%{_rc}.%{_rel}
@@ -35,11 +35,11 @@ as body retrieval.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 Mail_IMAP dostarcza uproszczonego backendu do pracy z rozszerzeniem
-IMAP. Dzia≥a jako zorientowany obiektowo wrapper na czÍsto uøywane
-funkcje biblioteki c-client. Przetwarza struktury oraz nag≥Ûwki jak
-rÛwnieø umoøliwia odbiÛr tre∂ci wiadomo∂ci.
+IMAP. Dzia≈Ça jako zorientowany obiektowo wrapper na czƒôsto u≈ºywane
+funkcje biblioteki c-client. Przetwarza struktury oraz nag≈Ç√≥wki jak
+r√≥wnie≈º umo≈ºliwia odbi√≥r tre≈õci wiadomo≈õci.
 
 Ta klasa ma w PEAR status: %{_status}.
 
