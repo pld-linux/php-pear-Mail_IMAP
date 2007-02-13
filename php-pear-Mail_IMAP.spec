@@ -7,7 +7,7 @@
 %define		_rc RC2
 %define		_rel 3
 Summary:	%{_pearname} - a c-client webmail backend
-Summary(pl.UTF-8):   %{_pearname} - backend webmaila oparty o bibliotekę c-client
+Summary(pl.UTF-8):	%{_pearname} - backend webmaila oparty o bibliotekę c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
 Release:	0.%{_rc}.%{_rel}
