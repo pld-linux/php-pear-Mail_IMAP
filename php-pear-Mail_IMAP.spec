@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define		_rc RC2
-%define		_rel 3
+%define		_rel 4
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl.UTF-8):	%{_pearname} - backend webmaila oparty o bibliotekę c-client
 Name:		php-pear-%{_pearname}
