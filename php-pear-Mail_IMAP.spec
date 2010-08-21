@@ -3,24 +3,24 @@
 %define		_subclass	IMAP
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
-
-%define		_rc RC2
-%define		_rel 4
+%define		subver RC2
+%define		rel 5
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl.UTF-8):	%{_pearname} - backend webmaila oparty o bibliotekę c-client
 Name:		php-pear-%{_pearname}
 Version:	1.1.0
-Release:	0.%{_rc}.%{_rel}
+Release:	0.%{subver}.%{rel}
 License:	PHP
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
 # Source0-md5:	5ed47847db2ff6e5ff733f2bd2147bef
 URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
-Requires:	php(imap)
+Requires:	php-imap
 Requires:	php-pear
+Suggests:	php-pear-Net_URL
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
