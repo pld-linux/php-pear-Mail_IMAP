@@ -2,7 +2,7 @@
 %define		_status		beta
 %define		_pearname	Mail_IMAP
 %define		subver RC2
-%define		rel 6
+%define		rel 7
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl.UTF-8):	%{_pearname} - backend webmaila oparty o bibliotekę c-client
 Name:		php-pear-%{_pearname}
@@ -16,7 +16,7 @@ URL:		http://pear.php.net/package/Mail_IMAP/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.571
-Requires:	php-imap
+Requires:	php(imap)
 Requires:	php-pear >= 4:1.3-6
 Suggests:	php-pear-Net_URL
 BuildArch:	noarch
