@@ -1,7 +1,7 @@
 %define		_status		beta
 %define		_pearname	Mail_IMAP
 %define		subver RC2
-%define		rel 7
+%define		rel 8
 Summary:	%{_pearname} - a c-client webmail backend
 Summary(pl.UTF-8):	%{_pearname} - backend webmaila oparty o bibliotekę c-client
 Name:		php-pear-%{_pearname}
